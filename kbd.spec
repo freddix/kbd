@@ -1,11 +1,11 @@
 Summary:	Linux console utilities
 Name:		kbd
-Version:	1.15.3
-Release:	3
+Version:	1.15.4
+Release:	1
 License:	GPL
 Group:		Applications/Console
 Source0:	ftp://ftp.altlinux.org/pub/people/legion/kbd/%{name}-%{version}.tar.gz
-# Source0-md5:	8143e179a0f3c25646ce5085e8777200
+# Source0-md5:	3c8297b373f7217332d09baf80d43fc1
 Source1:	lat2u-16.psf
 Source2:	lat2u.sfm
 Source10:	%{name}-pl1.kmap
@@ -14,7 +14,6 @@ Source12:	%{name}-pl3.map
 Source13:	%{name}-pl4.map
 #
 Patch0:		%{name}-unicode_start.patch
-Patch1:		%{name}-defkeymap.patch
 Patch2:		%{name}-po.patch
 URL:		http://www.win.tue.nl/~aeb/linux/
 BuildRequires:	bison
@@ -33,8 +32,7 @@ maps. It also includes a number of different fonts and keyboard maps.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
-%patch2 -p1
+#%patch2 -p1
 
 %build
 %{__gettextize}
@@ -46,7 +44,7 @@ maps. It also includes a number of different fonts and keyboard maps.
 	--datadir=%{_ldatadir}	\
 	--enable-nls		\
 	--localedir=%{_datadir}/locale
-%{__make}
+%{__make} -j1
 
 %install
 rm -rf $RPM_BUILD_ROOT
