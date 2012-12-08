@@ -1,11 +1,11 @@
 Summary:	Linux console utilities
 Name:		kbd
-Version:	1.15.4
+Version:	1.15.5
 Release:	1
 License:	GPL
 Group:		Applications/Console
 Source0:	ftp://ftp.altlinux.org/pub/people/legion/kbd/%{name}-%{version}.tar.gz
-# Source0-md5:	3c8297b373f7217332d09baf80d43fc1
+# Source0-md5:	34c71feead8ab9c01ec638acea8cd877
 Source1:	lat2u-16.psf
 Source2:	lat2u.sfm
 Source10:	%{name}-pl1.kmap
