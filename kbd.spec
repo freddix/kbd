@@ -1,11 +1,11 @@
 Summary:	Linux console utilities
 Name:		kbd
-Version:	2.0.0
+Version:	2.0.1
 Release:	1
 License:	GPL
 Group:		Applications/Console
 Source0:	ftp://ftp.altlinux.org/pub/people/legion/kbd/%{name}-%{version}.tar.gz
-# Source0-md5:	5ba259a0b2464196f6488a72070a3d60
+# Source0-md5:	cc0ee9f2537d8636cae85a8c6541ed2e
 URL:		http://www.win.tue.nl/~aeb/linux/
 BuildRequires:	bison
 BuildRequires:	flex
