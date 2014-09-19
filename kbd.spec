@@ -1,7 +1,7 @@
 Summary:	Linux console utilities
 Name:		kbd
 Version:	2.0.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Console
 Source0:	ftp://ftp.altlinux.org/pub/people/legion/kbd/%{name}-%{version}.tar.gz
