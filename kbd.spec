@@ -14,7 +14,7 @@ Requires:	sed
 Requires:	util-linux
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_ldatadir	%{_datadir}/%{name}
+%define		_datadir	%{_prefix}/share/kbd
 
 %description
 This package contains utilities to load console fonts and keyboard
@@ -30,7 +30,6 @@ maps. It also includes a number of different fonts and keyboard maps.
 %{__autoheader}
 %{__automake}
 %configure \
-	--datadir=%{_ldatadir}	\
 	--enable-nls		\
 	--localedir=%{_datadir}/locale
 %{__make} -j1
@@ -52,9 +51,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS COPYING ChangeLog README
 %attr(755,root,root) %{_bindir}/*
-%dir %{_ldatadir}
-%{_ldatadir}/console*
-%{_ldatadir}/keymaps
-%{_ldatadir}/unimaps
+%dir %{_datadir}
+%{_datadir}/console*
+%{_datadir}/keymaps
+%{_datadir}/unimaps
 %{_mandir}/man?/*
 
